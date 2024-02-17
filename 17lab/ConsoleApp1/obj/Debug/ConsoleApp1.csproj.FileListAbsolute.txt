@@ -1,2 +1,7 @@
 E:\DzGit\17lab\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
 E:\DzGit\17lab\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\DzGit\17lab\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\DzGit\17lab\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\DzGit\17lab\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\DzGit\17lab\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\DzGit\17lab\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
