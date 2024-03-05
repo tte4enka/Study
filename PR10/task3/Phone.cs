@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _3task
 {
@@ -24,9 +20,9 @@ namespace _3task
         public string _brand { get; set; }
         public int _functionCount {  get; set; }
 
-        public virtual double Cost(int k)
+        public virtual double Cost()
         {
-            return 40 * Math.Log(k);
+            return 40 * Math.Log(functionCount);
         }
     }
 }
