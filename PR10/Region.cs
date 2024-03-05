@@ -25,9 +25,9 @@ namespace _1task
         public override void ChangePlace()
         {
             Console.Write("Введети континент для изменения:");
-            nameOfRegion = Console.ReadLine();
-            Console.Write("Введите название области для изменения:");
             continent = Console.ReadLine();
+            Console.Write("Введите название области для изменения:");
+            nameOfRegion = Console.ReadLine();
         }
         public void ChangeName(string a)
         {

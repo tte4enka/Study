@@ -10,6 +10,7 @@ namespace _1task
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
