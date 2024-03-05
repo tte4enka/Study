@@ -2,7 +2,7 @@
 
 namespace _1task
 {
-    public class Region : Place
+    public sealed class Region : Place
     {
         private string NameOfRegion;
         public string nameOfRegion {  get; private set; }
