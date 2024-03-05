@@ -16,10 +16,15 @@ namespace _3task
             brand = "None";
             functionCount = 1;
         }
+        public Phone(string brand, int funcC)
+        {
+            this.brand = brand;
+            this.functionCount = funcC;
+        }
         public string _brand { get; set; }
         public int _functionCount {  get; set; }
 
-        public double Cost(int k)
+        public virtual double Cost(int k)
         {
             return 40 * Math.Log(k);
         }
