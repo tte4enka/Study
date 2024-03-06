@@ -1,6 +1,8 @@
-﻿namespace _1task
+﻿using System;
+
+namespace _1task
 {
-    public abstract class Place
+    public class Place
     {
         private string Continent;
         public string continent { get { return Continent; } set { } }
@@ -14,8 +16,15 @@
         {
             Continent = "Африка";
         }
-        public abstract void GetPlace();
-        public abstract void ChangePlace();
+        public virtual void GetPlace()
+        {
+            Console.WriteLine($"Место расположено на континенте:{Continent}");
+        }
+        public virtual void ChangePlace()
+        {
+            Console.Write("Введите континент для изменения:");
+            Continent = Console.ReadLine();
+        }
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
