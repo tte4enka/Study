@@ -13,7 +13,7 @@
             Third = third;
         }
 
-        public bool Equals(Triad other)
+        public virtual bool Equals(Triad other)
         {
             return this.First == other.First &&
                this.Second == other.Second &&

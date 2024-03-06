@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace _2task
 {
@@ -52,6 +51,13 @@ namespace _2task
             DateTime second = new DateTime(b.First, b.Second, b.Third);
 
             return first <= second;
+        }
+
+        public override bool Equals(Triad other)
+        {
+            return this.First == other.First &&
+               this.Second == other.Second &&
+               this.Third == other.Third;
         }
     }
 }
