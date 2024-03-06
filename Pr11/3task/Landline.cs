@@ -1,4 +1,6 @@
-﻿namespace _3task
+﻿using System;
+
+namespace _3task
 {
     public enum Mobility
     {
@@ -27,6 +29,11 @@
                 return base.Cost() + 5.7;
             else
                 return base.Cost() - 3.2;
+        }
+        public override void Display()
+        {
+            base.Display();
+            Console.WriteLine($"Мобильность: {mobility}");
         }
     }
 }

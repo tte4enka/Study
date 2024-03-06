@@ -27,5 +27,10 @@ namespace _3task
                 return base.Cost() - (base.Cost() * 0.6);
             return base.Cost();
         }
+        public override void Display()
+        {
+            base.Display();
+            Console.WriteLine($"Модель: {model}\nГод выпуска:{year}");
+        }
     }
 }

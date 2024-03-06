@@ -2,7 +2,7 @@
 
 namespace _3task
 {
-    public abstract class Phone
+    public class Phone
     {
         private string brand;
         private int functionCount;
@@ -17,12 +17,16 @@ namespace _3task
             this.brand = brand;
             this.functionCount = funcC;
         }
-        public string _brand { get; set; }
-        public int _functionCount { get; set; }
+        public virtual string _brand { get; set; }
+        public virtual int _functionCount { get; set; }
 
         public virtual double Cost()
         {
             return 40 * Math.Log(functionCount);
+        }
+        public virtual void Display()
+        {
+            Console.WriteLine($"Марка телефона: {brand}\nКоличество функций: {functionCount}");
         }
     }
 }
