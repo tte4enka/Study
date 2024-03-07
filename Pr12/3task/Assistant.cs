@@ -10,6 +10,8 @@ namespace _3task
 {
     public class Assistant : Person
     {
+        delegate void AddHandler();
+        event AddHandler Notify;
         private double seniority;
         private double salarysum;
 
@@ -17,6 +19,7 @@ namespace _3task
         {
             seniority = 0;
             salarysum = 0;
+            Notify += Add;
         }
 
         public Assistant(string name, string fio, long salary, long seniority, long salarysum): base(name, fio, salary)
@@ -24,6 +27,7 @@ namespace _3task
             this.seniority = seniority;
             this.salarysum = salarysum;
             CalculateSalary();
+            Notify += Add;
         }
         public double _seniority { get { return seniority; } }
         public double _salarysum { get { return salarysum; } set { salarysum = value; } }
@@ -31,6 +35,10 @@ namespace _3task
         public virtual void CalculateSalary()
         {
             salarysum = _salary + seniority * 0.2;
+        }
+        public virtual void Add()
+        {
+            Console.WriteLine("Успешно добавлен.");
         }
     }
 }

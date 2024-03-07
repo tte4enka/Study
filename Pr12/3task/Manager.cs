@@ -25,9 +25,14 @@ namespace _3task
 
         public long _subordinate { get { return subordinate; } set {  subordinate = value; } }
 
-        public override double CalculateSalary()
+        public override void CalculateSalary()
         {
-            _salarysum = base.CalculateSalary();
+            base.CalculateSalary();
+            _salarysum += _subordinate * 0.2;
+        }
+        public override void Add()
+        {
+            base.Add();
         }
     }
 }

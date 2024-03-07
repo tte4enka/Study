@@ -6,6 +6,13 @@ namespace _3task
     {
         static void Main(string[] args)
         {
+            Assistant assistant = new Assistant();
+            Manager manager = new Manager();
+
+            assistant.Add();
+            manager.Add();
+
+            Console.ReadKey();
         }
     }
 }

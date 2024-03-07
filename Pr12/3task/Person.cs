@@ -27,6 +27,6 @@ namespace _3task
         }
         public string _name { get { return name; } }
         public string _fio { get {  return fio; } }
-        public long _salary { get {  return salary; } }
+        public double _salary { get {  return salary; } }
     }
 }
