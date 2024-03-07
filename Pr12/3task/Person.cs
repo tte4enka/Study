@@ -10,7 +10,7 @@ namespace _3task
     {
         private string name;
         private string fio;
-        private long salary;
+        private double salary;
 
         public Person()
         {

@@ -26,11 +26,11 @@ namespace _3task
             CalculateSalary();
         }
         public double _seniority { get { return seniority; } }
-        public double _salarysum { get { return salarysum; } }
+        public double _salarysum { get { return salarysum; } set { salarysum = value; } }
 
-        public void CalculateSalary()
+        public virtual void CalculateSalary()
         {
-            this.salarysum = _salary + seniority * 0.2;
+            salarysum = _salary + seniority * 0.2;
         }
     }
 }
