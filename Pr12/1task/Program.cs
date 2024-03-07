@@ -26,7 +26,7 @@ namespace _1task
                 city.ChangePlace();
                 metropolis.ChangePlace();
             };
-            get.Invoke();
+            change.Invoke();
 
             Console.ReadKey();
         }
