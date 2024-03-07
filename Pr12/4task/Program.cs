@@ -16,6 +16,28 @@ namespace _4task
     {
         static void Main(string[] args)
         {
+            Book[] books = new Book[]
+            {
+            new Book("Жизнь 0", "Попов", "Санкт"),
+            new Book("Программирование за", "Мельников", "Петр2"),
+            new Book("С#", "Кузнецов", "Жизненно")
+            };
+
+            BookCollection bookCollection = new BookCollection(books);
+
+            Console.WriteLine("Сортировка по названию:");
+            bookCollection.SortCollection(BookCollection.CompareByTitle);
+            bookCollection.DisplayCollection();
+
+            Console.WriteLine("\nСортировка по автору:");
+            bookCollection.SortCollection(BookCollection.CompareByAuthor);
+            bookCollection.DisplayCollection();
+
+            Console.WriteLine("\nСортировка по издательству:");
+            bookCollection.SortCollection(BookCollection.CompareByPublisher);
+            bookCollection.DisplayCollection();
+            Console.ReadKey();
+
         }
     }
 }
