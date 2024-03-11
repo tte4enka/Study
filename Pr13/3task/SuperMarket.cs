@@ -5,17 +5,28 @@ namespace _3task
 {
     public class SuperMarket
     {
-        private Queue _queue;
+        private double _cash;
+
+        public double Cash { get => _cash; set => _cash = value; }
+
+        public delegate void EventHandler(Buyer buyer);
+        public event EventHandler _onBuyerJoin;
 
         public SuperMarket()
         {
+            _onBuyerJoin += BuyerJoin;
         }
-
-        public SuperMarket(Queue queue)
+        public void RaiseOnBuyerJoin(Buyer b)
         {
-            Queue = queue;
+            _onBuyerJoin(b);
+        }
+        public void BuyerJoin(Buyer buyer)
+        {
+            buyer.AddItems();
+            buyer.Buy();
+            _cash += buyer.CartSum;
+            Console.WriteLine($"Магазин заработал: {_cash}");
         }
 
-        public Queue Queue { get => _queue; set => _queue = value; }
     }
 }
